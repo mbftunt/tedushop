@@ -11,10 +11,9 @@ namespace TeduShop.Model.Models
     [Table("OrderDetails")]
     public class OrderDetail
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key, Column(Order = 1)]
         public int OrderID { get; set; }
-        [Key]
+        [Key, Column(Order = 2)]
         public int ProductID { get; set; }
         public int Quantity { get; set; }
         [ForeignKey("OrderID")]
