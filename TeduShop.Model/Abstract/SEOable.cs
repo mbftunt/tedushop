@@ -14,6 +14,6 @@ namespace TeduShop.Model.Abstract
         public string CreateBy { get; set; }
         public DateTime? UpdateDate { get; set; }
         public string UpdateBy { get; set; }
-        public Boolean Status { get; set; }
+        public bool Status { get; set; }
     }
 }

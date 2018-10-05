@@ -10,7 +10,7 @@ using TeduShop.Model.Abstract;
 namespace TeduShop.Model.Models
 {
     [Table("Posts")]
-    public class Post:ISeotable
+    public class Post:SEOable
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -36,6 +36,7 @@ namespace TeduShop.Model.Models
         public bool? HomeFlag { get; set; }
         public bool? HotFlag { get; set; }
         public int? ViewCount { get; set; }
+        public virtual IEnumerable<PostTag> PostTags { get; set; }
 
 
     }

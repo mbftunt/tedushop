@@ -8,7 +8,7 @@ using TeduShop.Model.Models;
 
 namespace TeduShop.Data.Repositories
 {
-    public interface IPostCategoryRespository { }
+    public interface IPostCategoryRespository:IRepository<PostCategory> { }
     public class PostCategoryRespository:RepositoryBase<PostCategory>, IPostCategoryRespository
     {
         public PostCategoryRespository(DbFactory db) : base(db) { }
